@@ -1,0 +1,9 @@
+<h3> How are you feeling? </h3>
+
+<div class="moods">
+  <% @categories.each do |category| %>
+  <ul>
+    <li><a href="/categories/<%=category.id%>"><%= category.mood %> </li>
+  </ul>
+  <%end%>
+</div>
