@@ -1,29 +1,19 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
-# PostgreSQL driver
+gem 'sinatra'
+
 gem 'pg'
 
-# Sinatra driver
-gem 'sinatra'
-gem 'sinatra-contrib'
-
-gem 'activesupport', '~>4.1'
-gem 'activerecord', '~>4.1'
-gem 'bcrypt-ruby'
+gem 'activesupport'
+gem 'activerecord'
 
 gem 'rake'
 
-gem 'shotgun'
+gem 'bcrypt'
 
 group :test do
-  gem 'shoulda-matchers'
-  gem 'rack-test'
   gem 'rspec'
-  gem 'capybara'
+  gem 'rack-test'
 end
 
-group :test, :development do
-  gem 'factory_girl'
-  gem 'faker'
-end
+
