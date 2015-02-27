@@ -29,5 +29,6 @@ end
 
 get '/user_page/:id' do
   @categories = Categories.all
+
   erb :user_page
 end
