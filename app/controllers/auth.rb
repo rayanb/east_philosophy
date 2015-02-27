@@ -6,7 +6,7 @@ post '/login' do
   @user = User.find_by(email: params[:email])
   if @user.try(:authenticate, params[:password])
     session[:user_id] = @user.id
-    redirect "/user_page/#{@user.id}"
+    redirect "/users/#{@user.id}"
   else
    redirect '/'
   end
@@ -19,8 +19,4 @@ end
 post '/signup' do
   User.create(params)
   redirect '/login'
-end
-
-get '/user_page/:id' do
-  erb :user_page
 end
