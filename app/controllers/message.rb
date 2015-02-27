@@ -8,10 +8,13 @@ post '/create_message' do
   redirect "/messages/#{new_message.id}"
 end
 
-get '/messages/:id' do
-  @message = Message.find(params[:id])
+get '/messages/random' do
+  messages = Message.all
+  @message = Message.find(rand(1..messages.length))
   erb :'message/show'
 end
 
-get 'categories/:category_id/messages/all' do
+get '/messages/:id' do
+  @message = Message.find(params[:id])
+  erb :'message/show'
 end
