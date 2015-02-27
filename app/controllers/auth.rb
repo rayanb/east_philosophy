@@ -1,4 +1,4 @@
-get '/' do
+get '/login' do
   erb :login
 end
 
@@ -8,7 +8,7 @@ post '/login' do
     session[:user_id] = @user.id
     redirect "/users/#{@user.id}"
   else
-   redirect '/'
+   redirect '/login'
   end
 end
 
@@ -16,7 +16,14 @@ get '/signup' do
   erb :signup
 end
 
+get '/logout' do
+  session[:user_id] = nil
+  erb :login
+end
+
 post '/signup' do
-  User.create(params)
+  user = User.create(params)
+  session[:user_id] = user.id
   redirect '/login'
 end
+
