@@ -4,4 +4,5 @@ sad = Category.create(mood: "Sad")
 angry = Category.create(mood: "Angry")
 encouraged = Category.create(mood: "Encouraged")
 jeff = Message.create(title: "Jeff is Blitzkreig", content: "Jeff is my favorite friend, he keeps me grounded. Plus, he buys me coffee sometimes..", user: kev, category: encouraged)
-
+kevin = Message.create(title: "Cheese", content: "Applesauce is my favorite snack, I eat it when I am happy. I particularly enjoy it though when I am sad because it makes me happy again.", user: kev, category: encouraged)
+rayan = Message.create(title: "Happiness", content: "Dong Chul makes me happy. He is funny, and smart. I am glad Dong Chul and I are friends.", user: kev, category: happy)
