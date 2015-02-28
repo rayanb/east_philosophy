@@ -19,8 +19,9 @@
 <body>
 <div id="content">
   <header>
-
-    <a href="/messages/random"> Random Message </a>
+    <% if session[:user_id]%>
+      <a href="/messages/random"> Random Message </a>
+    <% end%>
 
   </header>
   <%= yield %>
