@@ -1,0 +1,12 @@
+body {
+    background-image: url("../images/Anonymous.jpg"); 
+}
+
+h1 {font-family: cursive;
+    font-size: 48px;
+    text-align: center;
+}
+
+#login {
+	text-align: center;
+}
