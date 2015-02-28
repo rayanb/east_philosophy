@@ -26,3 +26,5 @@ post '/signup' do
   session[:user_id] = user.id
   redirect '/login'
 end
+
+
