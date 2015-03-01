@@ -1,6 +1,6 @@
 <form action="/create_message" method="POST">
-  <input type="text" name="title">
-  <input type="text" name="content">
+  <input type="text" name="title" placeholder="Title">
+  <textarea type="text" name="content"placeholder="Your text here"></textarea>
   <select name="category_id">
     <% @categories.each do |category|%>
     <option value="<%=category.id%>"><%=category.mood%></option>

@@ -4,8 +4,15 @@ get '/messages/new' do
 end
 
 post '/create_message' do
-  new_message = Message.create(params)
-  redirect "/messages/#{new_message.id}"
+  p "*****"
+  p session
+  user = User.find(session[:user_id])
+  if user
+    new_message = user.messages.create(params)
+    redirect "/messages/#{new_message.id}"
+  else
+    redirect '/'
+  end
 end
 
 get '/messages/random' do

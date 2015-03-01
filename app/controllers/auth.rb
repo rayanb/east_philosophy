@@ -16,7 +16,7 @@ post '/login' do
     session[:user_id] = @user.id
     redirect "/categories/all"
   else
-   redirect '/login'
+    redirect '/login'
   end
 end
 
