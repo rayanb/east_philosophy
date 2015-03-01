@@ -7,7 +7,7 @@
 <%end%>
   <ul>
   <% @messages.each do |message|%>
-    <h2><i><%=message.title%></i></h2>
+    <h2><i><a href="/messages/<%=message.id%>"><%=message.title%></a></i></h2>
     <p><%=message.content%></p>
   <% end%>
   </ul>

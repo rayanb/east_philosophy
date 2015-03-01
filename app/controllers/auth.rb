@@ -1,3 +1,11 @@
+get '/' do
+  if session[:user_id]
+    erb :user_page
+  else
+    erb :login
+  end
+end
+
 get '/login' do
   erb :login
 end
@@ -6,9 +14,9 @@ post '/login' do
   @user = User.find_by(email: params[:email])
   if @user.try(:authenticate, params[:password])
     session[:user_id] = @user.id
-    redirect "/users/#{@user.id}"
+    redirect "/categories/all"
   else
-   redirect '/login'
+    redirect '/login'
   end
 end
 
@@ -24,7 +32,7 @@ end
 post '/signup' do
   user = User.create(params)
   session[:user_id] = user.id
-  redirect '/login'
+  redirect '/categories/all'
 end
 
 

@@ -3,6 +3,7 @@
 <div class="moods">
   <% @categories.each do |category| %>
   <ul>
+
     <li><a href="/categories/<%=category.id%>"><%= category.mood %></a> </li>
   </ul>
   <%end%>
@@ -10,4 +11,6 @@
 
 <div class ="options">
   <a href='/logout'> Logout </a> <br> <a href='/messages/new'>Create Message</a>
+
 </div>
+
