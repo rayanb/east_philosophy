@@ -1,6 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/stylesheets/create_message.css">
+</head>
+
+<div class="container">
 <form action="/create_message" method="POST">
   <input type="text" name="title" placeholder="Title">
+  <br>
   <textarea type="text" name="content"placeholder="Your text here"></textarea>
+  <br>
   <select name="category_id">
     <% @categories.each do |category|%>
     <option value="<%=category.id%>"><%=category.mood%></option>
@@ -10,4 +20,5 @@
 </form>
 <div class ="options">
   <a href='/logout'> Logout </a>
+</div>
 </div>
