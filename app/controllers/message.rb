@@ -4,8 +4,6 @@ get '/messages/new' do
 end
 
 post '/create_message' do
-  p "*****"
-  p session
   user = User.find(session[:user_id])
   if user
     new_message = user.messages.create(params)

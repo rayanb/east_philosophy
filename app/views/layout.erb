@@ -7,6 +7,9 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" href="/stylesheets/user_page.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+  <link rel="stylesheet" href="/stylesheets/create_message.css">
   <!--
     application.css is where you put your styles
   -->
@@ -23,12 +26,17 @@
     <% if session[:user_id]%>
       <a href="/messages/random"> Random Message </a>
       <a href="/categories/all"> What's your mood </a>
-      <a href="/logout"> Log out </a>
     <% end%>
 
   </header>
 
   <%= yield %>
+  <% if session[:user_id]%>
+    <div class ="options">
+    <a href='/logout'> Logout </a> <br> <a href='/messages/new'>Create Message</a>
+
+    </div>
+  <%end%>
 </div>
 </body>
 </html>
