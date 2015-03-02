@@ -1,4 +1,15 @@
 <h1><strong><%=@category.mood%></strong></h1>
+
+<% if @category.mood == "Happy"%>
+  <img src="../images/smileyface.jpg">
+<% elsif @category.mood == "Sad"%>
+  <img src="../images/sad.jpg">
+  <% elsif @category.mood == "Angry"%>
+  <img src="../images/angry.jpg">
+  <% elsif @category.mood == "Encouraged"%>
+  <img src="../images/encouraged.jpg">
+<%end%>
+
   <ul>
   <% @messages.each do |message|%>
     <h2><i><a href="/messages/<%=message.id%>"><%=message.title%></a></i></h2>
