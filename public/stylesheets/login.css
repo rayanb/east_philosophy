@@ -1,6 +1,3 @@
-body {
-    background-image: url("../images/Anonymous.jpg"); 
-}
 
 h1 {font-family: cursive;
     font-size: 48px;
@@ -9,4 +6,8 @@ h1 {font-family: cursive;
 
 #container {
 	text-align: center;
+}
+body {
+		background-image: url("../images/Anonymous.jpg"); 
+
 }
