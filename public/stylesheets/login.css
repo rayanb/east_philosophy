@@ -1,4 +1,5 @@
 
+/* Use EM instead of px or % for font size   */
 h1 {font-family: cursive;
     font-size: 48px;
     text-align: center;

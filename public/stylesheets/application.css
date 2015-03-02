@@ -11,6 +11,7 @@ body {
     background-image: url("../images/grey.jpg"); 
 }
 
+/*lowercase img */
 IMG {
     display: block;
     margin-left: auto;

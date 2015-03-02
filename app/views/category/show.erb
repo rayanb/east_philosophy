@@ -1,5 +1,6 @@
 <h1><strong><%=@category.mood%></strong></h1>
 
+<!-- USE CSS CLASSES TO ADD THE IMAGE INSTEAD OF THIS BIG IF --> 
 <% if @category.mood == "Happy"%>
   <img src="../images/smileyface.jpg">
 <% elsif @category.mood == "Sad"%>
@@ -10,6 +11,7 @@
   <img src="../images/encouraged.jpg">
 <%end%>
 
+<!-- USE CSS TO DO THINGS -->
   <ul>
   <% @messages.each do |message|%>
     <h2><i><a href="/messages/<%=message.id%>"><%=message.title%></a></i></h2>
