@@ -1,3 +1,5 @@
+# Look into using Faker Gem to create all this stuff 
+
 kev = User.create(email:"kevin@dbc.com", password:"cheese")
 jeff = User.create(email:"jeff@dbc.com", password:"phase2")
 rayan = User.create(email:"rayan@dbc.com", password: "12345")

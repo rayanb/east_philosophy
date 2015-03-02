@@ -12,6 +12,7 @@ describe 'Message' do
     post '/create_message', params={title: "Testing a post is different", content: "I really find it challenging, I like it..."}
     expect(last_response).to be_redirect
     follow_redirect!
+    #Params wont exists in this context 
     expect(last_response.body).to_include(params[:title])
 
   end

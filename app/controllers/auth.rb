@@ -31,6 +31,9 @@ end
 
 post '/signup' do
   user = User.create(params)
+
+   #What happens if the create fails?
+
   session[:user_id] = user.id
   redirect '/categories/all'
 end

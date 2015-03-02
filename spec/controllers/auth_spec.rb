@@ -4,6 +4,8 @@ describe 'users' do
   let(:user) { User.create(email: "jeff@dbc.com", password: "phase2")}
   let(:category) {Category.create(mood: "Happy")}
 
+
+  #Move Before statements into the test where you need them to be.
   before do
     user
     category
@@ -25,6 +27,7 @@ describe 'users' do
   end
 
   it 'should log in existing user' do
+    #Use the :user to get email and password, it will warm the DB
     post '/login', params={email: "jeff@dbc.com", password: "phase2"}
     expect(last_response).to be_redirect
     follow_redirect!
