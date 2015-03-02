@@ -9,6 +9,7 @@
   <% elsif @category.mood == "Encouraged"%>
   <img src="../images/encouraged.jpg">
 <%end%>
+
   <ul>
   <% @messages.each do |message|%>
     <h2><i><a href="/messages/<%=message.id%>"><%=message.title%></a></i></h2>
