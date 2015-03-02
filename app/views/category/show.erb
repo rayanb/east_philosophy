@@ -1,9 +1,13 @@
 <h1><strong><%=@category.mood%></strong></h1>
 
 <% if @category.mood == "Happy"%>
-  <div class="container" style="background-image: url('http://doge2048.com/meta/doge-600.png')">
+  <img src="../images/smileyface.jpg">
 <% elsif @category.mood == "Sad"%>
-  <div class="container" style="background-image: url('http://rack.0.mshcdn.com/media/ZgkyMDEzLzA3LzIyL2I0L3NhZHB1Zy41YTliNC5naWYKcAl0aHVtYgkxMjAweDYyNyMKZQlqcGc/d77a3554/c20/sad-pug.jpg')">
+  <img src="../images/sad.jpg">
+  <% elsif @category.mood == "Angry"%>
+  <img src="../images/angry.jpg">
+  <% elsif @category.mood == "Encouraged"%>
+  <img src="../images/encouraged.jpg">
 <%end%>
   <ul>
   <% @messages.each do |message|%>

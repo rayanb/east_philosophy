@@ -6,3 +6,12 @@
   background-size:cover;
 
 }
+
+body {
+    background-image: url("../images/grey.jpg"); 
+}
+
+IMG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
