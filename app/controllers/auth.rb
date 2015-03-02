@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/login' do
-  erb :login, layout: auth_layout
+  erb :login, layout: :auth_layout
 end
 
 post '/login' do
